@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+        traffic: {
+          blue: '#3b82f6',
+          lightBlue: '#60a5fa',
+          dark: '#1e3a8a',
+          light: '#f0f9ff',
+          accent: '#38bdf8',
+        },
+        glass: {
+          light: 'rgba(255, 255, 255, 0.6)',
+          dark: 'rgba(15, 23, 42, 0.75)',
+        }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +96,41 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+        'pulse-soft': {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.6' },
+        },
+        'fade-in': {
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'slide-up': {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'slide-in-right': {
+          '0%': { opacity: '0', transform: 'translateX(20px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-5px)' },
+        },
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+        'pulse-soft': 'pulse-soft 2s ease-in-out infinite',
+        'fade-in': 'fade-in 0.5s ease-out',
+        'slide-up': 'slide-up 0.5s ease-out',
+        'slide-in-right': 'slide-in-right 0.5s ease-out',
+        'float': 'float 3s ease-in-out infinite',
+			},
+      backdropFilter: {
+        'none': 'none',
+        'blur': 'blur(8px)',
+      },
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
