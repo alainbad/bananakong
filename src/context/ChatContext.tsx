@@ -32,7 +32,7 @@ const mockMessages: Message[] = [
   {
     id: 'msg1',
     senderId: 'user1',
-    text: 'Anyone know what's causing this traffic?',
+    text: "Anyone know what's causing this traffic?",
     timestamp: new Date(Date.now() - 1000 * 60 * 10), // 10 minutes ago
     isRead: true,
   },
