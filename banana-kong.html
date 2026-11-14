@@ -1235,7 +1235,7 @@ function drawGorilla(gx, gy, playerIdx, armRaised) {
   }
 
   // Knuckles
-  [[16,-54],[−16,-54]].forEach(([kx,ky]) => {
+  [[16,-54],[-16,-54]].forEach(([kx,ky]) => {
     ctx.beginPath();
     ctx.arc(kx, ky, 4, 0, Math.PI*2);
     ctx.fillStyle = '#2a1a0a';
